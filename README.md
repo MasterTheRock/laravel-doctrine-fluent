@@ -14,8 +14,34 @@
 
 *A fluent mapping driver for Doctrine2*
 
+Add this to your composer.json
+
 ```
- composer require git@github.com:MasterTheRock/laravel-doctrine-fluent.git
+"require": {
+	"mastertherock/laravel-doctrine-fluent": "1.1.7"
+},
+"autoload": {
+	"files": [
+		"app/Helpers/helpers.php"
+	],
+	"psr-4": {
+		"LaravelDoctrine\\Fluent\\": "vendor/mastertherock/laravel-doctrine-fluent/src/"
+	}
+},
+"repositories": [
+	{
+		"type": "package",
+		"package": {
+			"name": "mastertherock/laravel-doctrine-fluent",
+			"version": "1.1.7",
+			"source": {
+				"url": "https://github.com/MasterTheRock/laravel-doctrine-fluent.git",
+				"type": "git",
+				"reference": "origin/master"
+			}
+		}
+	}
+]
 ```
 
 This mapping driver allows you to manage your mappings in an Object Oriented approach, separating your entities
